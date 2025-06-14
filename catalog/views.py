@@ -125,7 +125,6 @@ from .models import Author, Book
 class AuthorCreate(PermissionRequiredMixin, CreateView):
     model = Author
     fields = ['first_name', 'last_name', 'date_of_birth', 'date_of_death']
-    initial = {'date_of_death': '11/11/2023'}
     permission_required = 'catalog.add_author'
 
 class AuthorUpdate(PermissionRequiredMixin, UpdateView):
